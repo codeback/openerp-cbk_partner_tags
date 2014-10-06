@@ -53,10 +53,10 @@ class res_partner(osv.osv):
                     hasDistribution = True
                     vals[partner.id]['tag_distribution'] = category.id
 
-            if hasChannel == False
+            if hasChannel == False:
                 vals[partner.id]['tag_channel'] = None
 
-            if hasDistribution == False
+            if hasDistribution == False:
                 vals[partner.id]['tag_distribution'] = None
 
 

@@ -39,18 +39,26 @@ class res_partner(osv.osv):
         for partner in self.browse(cr,uid,ids):
             vals[partner.id] = {}
 
+            hasChannel = False
+            hasDistribution = False
+
             for category in partner.category_id:
                 root = self._get_root_parent(category)
 
                 if root.name == u'Canal':
+                    hasChannel = True
                     vals[partner.id]['tag_channel'] = category.id
-                # else:
-                #     vals[partner.id]['tag_channel'] = None
 
                 if root.name == u'Distribución':
+                    hasDistribution = True
                     vals[partner.id]['tag_distribution'] = category.id
-                # else:
-                #     vals[partner.id]['tag_distribution'] = None
+
+            if hasChannel == False
+                vals[partner.id]['tag_channel'] = None
+
+            if hasDistribution == False
+                vals[partner.id]['tag_distribution'] = None
+
 
         return vals
 

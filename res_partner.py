@@ -64,13 +64,13 @@ class res_partner(osv.osv):
     _columns = {   
         'tag_channel': fields.function(_get_tags,
                           multi=True,
-                          string='Canal',
+                          string=u'Canal',
                           type='many2one',
                           relation='res.partner.category',
                           store=True),
         'tag_distribution': fields.function(_get_tags,
                           multi=True,
-                          string='Distribución',
+                          string=u'Distribución',
                           type='many2one',
                           relation='res.partner.category',
                           store=True)

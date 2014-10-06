@@ -29,7 +29,7 @@
     'description' : 'Añade etiquetas para la categorización de partners (necesario por la mala ejecución de filtros que tiene el actual árbol)',
     'website': 'http://codeback.es',
     'images': [],    
-    'depends': [],
+    'depends': ['base'],
     'category': '',
     'sequence': 26,
     'demo': [],

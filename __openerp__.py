@@ -33,7 +33,7 @@
     'category': '',
     'sequence': 26,
     'demo': [],
-    'data': [],
+    'data': ['res_partner_view.xml'],
     'test': [],
     'installable': True,
     'application': False,

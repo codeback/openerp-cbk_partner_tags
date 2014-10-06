@@ -7,23 +7,24 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="priority" eval="20"/>
             <field name="arch" type="xml">    
-                <field name="category_id" position="after">
-                    <field name="tag_channel" invisible="True"/>
-                    <field name="tag_distribution" invisible="True"/>
+                <field name="comment" position="before">
+                    <field name="tag_channel"/>
+                    <field name="tag_distribution"/>
                 </field>                                       
             </field> 
         </record>      
 
-        <record model="ir.ui.view" id="view_partner_tags_kanban">
-            <field name="name">res.partner.tags.kanban</field>
+        <record id="view_partner_tags_tree" model="ir.ui.view">
+            <field name="name">res.partner.tags.tree</field>
             <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field eval="8" name="priority"/>
             <field name="arch" type="xml">
-                <field name="category_id" position="after">
-                    <field name="tag_channel" invisible="True"/>
-                    <field name="tag_distribution" invisible="True"/>
-                </field> 
+                <field name="name" position="after">
+                    <field name="tag_channel"/>
+                    <field name="tag_distribution"/>
+                </field>   
             </field>
-         </record>
+        </record>
     </data>
 </openerp>

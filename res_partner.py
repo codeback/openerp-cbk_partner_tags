@@ -74,13 +74,11 @@ class res_partner(osv.osv):
                           multi=True,
                           string=u'Canal',
                           type='many2one',
-                          relation='res.partner.category',
-                          store=True),
+                          relation='res.partner.category'),
         'tag_distribution': fields.function(_get_tags,
                           multi=True,
                           string=u'Distribución',
                           type='many2one',
-                          relation='res.partner.category',
-                          store=True)
+                          relation='res.partner.category')
     }
 
